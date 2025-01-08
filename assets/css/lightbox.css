@@ -1,0 +1,264 @@
+html {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.preview {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row > .col {
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.row > .col:hover .preview {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.col {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding: 10px 62px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dots .col {
+  flex: 1;
+  margin: 0 10px;
+}
+
+img.hover-shadow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 38%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 24px;
+  transition: background-color 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive image styles */
+.image-slide {
+  max-width: 100%;
+  max-height: 80vh; /* Make sure the image doesn't exceed the viewport height */
+  object-fit: contain; /* Scale the image to maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.modal-preview {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.slide {
+  display: none;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+  opacity: 1;
+}
+
+img.preview,
+img.modal-preview {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* 2 */
+.image-slide2 {
+  max-width: 100%;
+  max-height: 80vh; /* Make sure the image doesn't exceed the viewport height */
+  object-fit: contain; /* Scale the image to maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.modal-preview2 {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.slide2 {
+  display: none;
+}
+
+img.active,
+.preview:hover,
+.modal-preview2:hover {
+  opacity: 1;
+}
+
+img.preview,
+img.modal-preview2 {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* 3 */
+.image-slide3 {
+  max-width: 100%;
+  max-height: 80vh; /* Make sure the image doesn't exceed the viewport height */
+  object-fit: contain; /* Scale the image to maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.modal-preview3 {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.slide3 {
+  display: none;
+}
+
+img.active,
+.preview:hover,
+.modal-preview3:hover {
+  opacity: 1;
+}
+
+img.preview,
+img.modal-preview3 {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+/* 
+unik style
+
+.image-slide2 {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain; 
+  border-radius: 8px;
+}
+
+.modal-preview2 {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.slide2 {
+  display: none;
+}
+
+
+img.active,
+.preview:hover,
+.modal-preview2:hover {
+  opacity: 1;
+}
+
+img.preview, img.modal-preview2 {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+*/
+/* Lightbox2
+  slide2
+  changeSlide2
+  toSlide2
+  modal-preview2  */
